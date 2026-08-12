@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Valle Verde · Eco-resort en El Valle de Antón, Panamá</title>
+<meta name="description" content="Eco-resort en El Valle de Antón, Coclé. Jardines floridos entre dos riachuelos, vista a las montañas, suites y habitaciones familiares, y restaurante de auténtica cocina peruana.">
+<meta name="theme-color" content="#12271d">
+<link rel="canonical" href="https://www.hotel-valleverde.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PA">
+<meta property="og:site_name" content="Hotel Valle Verde">
+<meta property="og:title" content="Hotel Valle Verde · Eco-resort en El Valle de Antón">
+<meta property="og:description" content="Jardines floridos entre dos riachuelos, vista a las montañas y auténtica cocina peruana en el único volcán habitado del mundo.">
+<meta property="og:url" content="https://www.hotel-valleverde.com/">
+<meta property="og:image" content="assets/img/og-valle-verde.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Las tipografías no deben bloquear el primer pintado -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;350;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;350;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;350;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
+
+<!-- ===================== Cabecera ===================== -->
+<header class="cabecera">
+  <div class="cabecera__interior">
+    <a class="marca" href="index.html">
+      <span class="marca__emblema" aria-hidden="true">VV</span>
+      <span class="marca__texto">
+        <span class="marca__nombre">Valle Verde</span>
+        <span class="marca__bajada">Hotel &amp; Restaurante</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+      <ul class="nav__lista">
+        <li><a class="nav__enlace" href="index.html" aria-current="page">Inicio</a></li>
+        <li><a class="nav__enlace" href="habitaciones.html">Habitaciones</a></li>
+        <li><a class="nav__enlace" href="restaurante.html">Restaurante</a></li>
+        <li><a class="nav__enlace" href="servicios.html">Servicios</a></li>
+        <li><a class="nav__enlace" href="galeria.html">Galería</a></li>
+      </ul>
+      <a class="btn btn--primario nav__cta" href="reservaciones.html">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ===================== Hero ===================== -->
+  <section class="hero">
+    <div class="hero__media">
+      <div class="marcador marcador--lleno" data-etiqueta="hero-valle-verde.jpg — el hotel entre los jardines, con el cerro al fondo"></div>
+    </div>
+    <div class="hero__contenido">
+      <span class="antetitulo">El Valle de Antón · Coclé, Panamá</span>
+      <h1>Donde la montaña se toma su tiempo</h1>
+      <p class="hero__texto">
+        Un eco-resort de jardines floridos entre dos riachuelos, en el cráter del
+        único volcán habitado del mundo.
+      </p>
+      <div class="hero__acciones">
+        <a class="btn btn--fantasma" href="habitaciones.html">Ver habitaciones y tarifas</a>
+      </div>
+
+      <!-- Buscador de disponibilidad: primer paso de la reserva, sin bajar -->
+      <form class="buscador" data-buscador aria-label="Comprobar disponibilidad">
+        <div class="buscador__campo">
+          <label for="b-llegada">Llegada</label>
+          <input type="date" id="b-llegada" name="llegada">
+        </div>
+
+        <div class="buscador__campo">
+          <label for="b-salida">Salida</label>
+          <input type="date" id="b-salida" name="salida">
+        </div>
+
+        <div class="buscador__campo">
+          <label for="b-huespedes">Huéspedes</label>
+          <select id="b-huespedes" name="huespedes">
+            <option value="1">1 persona</option>
+            <option value="2" selected>2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5 personas</option>
+          </select>
+        </div>
+
+        <div class="buscador__accion">
+          <button class="btn btn--primario" type="submit">Ver disponibilidad</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== El hotel ===================== -->
+  <section class="seccion" id="el-hotel">
+    <div class="contenedor">
+      <div class="duo">
+        <div class="revelar">
+          <span class="antetitulo">El hotel</span>
+          <h2>Hotel y Restaurante Valle Verde, eco-resort</h2>
+          <p class="entradilla">
+            Se encuentra ubicado en la provincia de Coclé, en el espectacular Valle de Antón.
+          </p>
+          <p>
+            Los huéspedes son atraídos por los bellos y floridos jardines con vista
+            espectacular a relajantes montañas, rodeados por dos hermosos riachuelos que se
+            observan perfectamente desde nuestro eco-resort.
+          </p>
+          <p>
+            Ofrecemos confortables suites, habitaciones familiares, habitaciones de parejas y
+            habitaciones para personas con discapacidad, bien equipadas y con excelentes
+            servicios: TV por cable, aire acondicionado, wi-fi y espaciosos baños privados con
+            agua caliente.
+          </p>
+          <p style="margin-top:2rem">
+            <a class="btn btn--linea" href="habitaciones.html">Conocer las habitaciones</a>
+          </p>
+        </div>
+
+        <div class="figura revelar">
+          <div class="marcador" data-etiqueta="hotel-jardines.jpg — fachada del hotel con techo de teja y jardines"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Pilares ===================== -->
+  <section class="seccion seccion--alt">
+    <div class="contenedor">
+      <div class="encabezado-seccion revelar">
+        <span class="antetitulo">Lo que encontrará</span>
+        <h2>Tres razones para quedarse</h2>
+      </div>
+
+      <div class="rejilla rejilla--3">
+        <article class="dato revelar">
+          <svg class="dato__icono" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M4 38h40M8 38V22l10-8 10 8v16M22 38V28h6v10M32 38V18l6-4 6 4v20"/>
+          </svg>
+          <h3>Jardines y montaña</h3>
+          <p>
+            Bellos y floridos jardines rodeados por dos riachuelos, con vista abierta a los
+            cerros del valle y clima fresco de montaña todo el año.
+          </p>
+        </article>
+
+        <article class="dato revelar">
+          <svg class="dato__icono" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M14 6v18a4 4 0 0 0 8 0V6M18 24v18M34 6c-3 4-4 8-4 12s1 6 4 6 4-2 4-6-1-8-4-12ZM34 24v18"/>
+          </svg>
+          <h3>Cocina peruana auténtica</h3>
+          <p>
+            Nuestro Restaurante Bar e Internet Café ofrece la deliciosa y auténtica comida
+            peruana, además de cocina panameña e internacional.
+          </p>
+        </article>
+
+        <article class="dato revelar">
+          <svg class="dato__icono" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M6 40V14a2 2 0 0 1 2-2h32a2 2 0 0 1 2 2v26M6 40h36M14 12V8M34 12V8M16 24h16M16 32h10"/>
+          </svg>
+          <h3>Salón para eventos</h3>
+          <p>
+            Un gran salón perfecto para conferencias y negocios, eventos familiares y
+            cumpleaños, con capacidad máxima de 40 personas.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Habitaciones ===================== -->
+  <section class="seccion" id="habitaciones">
+    <div class="contenedor">
+      <div class="encabezado-seccion revelar">
+        <span class="antetitulo">Alojamiento</span>
+        <h2>Habitaciones para cada viaje</h2>
+        <p class="entradilla">
+          Desde una escapada en pareja hasta la familia completa. Todas con baño privado,
+          agua caliente, TV por cable, aire acondicionado y wi-fi.
+        </p>
+      </div>
+
+      <div class="rejilla rejilla--3">
+        <article class="tarjeta revelar">
+          <div class="tarjeta__media">
+            <span class="etiqueta">2 personas</span>
+            <div class="marcador" data-etiqueta="habitacion-matrimonial.jpg"></div>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <h3>Habitación Matrimonial</h3>
+            <p>Una cama doble, baño privado con agua caliente, TV por cable, aire acondicionado y vista panorámica.</p>
+            <div class="tarjeta__pie">
+              <span class="precio">B/. 90<small>por noche</small></span>
+              <a class="btn btn--linea" href="habitaciones.html#matrimonial">Detalles</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta revelar">
+          <div class="tarjeta__media">
+            <span class="etiqueta">2 · 3 personas</span>
+            <div class="marcador" data-etiqueta="suite.jpg"></div>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <h3>Suite</h3>
+            <p>Cama Queen más una twin, baño con tina, sala de estar, mini refrigeradora y balcón con vista panorámica.</p>
+            <div class="tarjeta__pie">
+              <span class="precio">B/. 150<small>por noche</small></span>
+              <a class="btn btn--linea" href="habitaciones.html#suite">Detalles</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta revelar">
+          <div class="tarjeta__media">
+            <span class="etiqueta">4 · 5 personas</span>
+            <div class="marcador" data-etiqueta="habitacion-familiar.jpg"></div>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <h3>Habitación Familiar</h3>
+            <p>Cuádruplex y quíntuplex con dos camas dobles, ideales para viajes en familia o grupos de amigos.</p>
+            <div class="tarjeta__pie">
+              <span class="precio">B/. 150<small>desde, por noche</small></span>
+              <a class="btn btn--linea" href="habitaciones.html#familiares">Detalles</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="nota revelar">
+        Los precios no incluyen el <strong>10 % de impuesto hotelero</strong>.
+        Contamos con habitaciones para personas con discapacidad.
+        <a href="habitaciones.html#tarifas">Ver la lista completa de tarifas</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== Restaurante ===================== -->
+  <section class="seccion seccion--verde" id="restaurante">
+    <div class="contenedor">
+      <div class="duo duo--invertido">
+        <div class="figura revelar">
+          <div class="marcador" data-etiqueta="restaurante-plato.jpg — ceviche o langostinos a lo macho"></div>
+        </div>
+
+        <div class="revelar">
+          <span class="antetitulo">Restaurante Bar</span>
+          <h2>La gastronomía del Perú, en el valle</h2>
+          <p class="entradilla">
+            A lo largo de toda la costa peruana existen más de 2.500 tipos de platos y sopas
+            distintos, y más de 250 postres.
+          </p>
+          <p>
+            Servimos ceviche peruano, ceviche mixto y de camarones, ají de gallina, jalea de
+            mariscos, lomo saltado, chupe de camarones, parihuela, aguadito de mariscos, causa
+            limeña, papa a la huancaína y nuestro plato bandera: langostinos a lo macho.
+          </p>
+          <p style="margin-top:2rem">
+            <a class="btn btn--fantasma" href="restaurante.html">Ver el menú</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== El Valle de Antón ===================== -->
+  <section class="seccion" id="el-valle">
+    <div class="contenedor">
+      <div class="encabezado-seccion revelar">
+        <span class="antetitulo">El destino</span>
+        <h2>El Valle de Antón</h2>
+      </div>
+
+      <div class="duo">
+        <div class="revelar">
+          <p>
+            Cuenta con maravillosas montañas que rodean el lugar y un sinnúmero de sitios por
+            conocer. Ha sido por décadas el escape perfecto al calor y al bullicio de la
+            ciudad. Sus ríos, caídas de agua, exuberante vegetación, el esplendor de sus
+            paisajes y la majestuosidad de la <em>India Dormida</em> hacen de este sitio un
+            excelente destino para quienes gustan de la frescura y la tranquilidad que la
+            naturaleza ofrece.
+          </p>
+          <p>
+            Es el único volcán habitado en todo el mundo. Sus visitantes tienen la oportunidad
+            de realizar turismo ecológico por la variedad de aves que se puede observar, así
+            como deportes al aire libre y paseos a caballo. Tiene un clima fresco de montaña
+            todo el año.
+          </p>
+        </div>
+
+        <div class="revelar">
+          <h3>Sitios turísticos de El Valle</h3>
+          <ul class="lista-chulos">
+            <li>Observación de aves</li>
+            <li>La India Dormida</li>
+            <li>Canopy Tour</li>
+            <li>Zoológico El Níspero</li>
+            <li>Petroglifos</li>
+            <li>Museo de El Valle</li>
+            <li>Chorro de las Mozas</li>
+            <li>Cabalgata a caballo</li>
+            <li>Excursionismo</li>
+            <li>Aguas termales y medicinales</li>
+            <li>Serpentario y orquideario</li>
+          </ul>
+          <p style="margin-top:1.5rem; font-size:var(--paso--1)">
+            Más información sobre El Valle:
+            <a href="https://www.el-valle-panama.com" rel="noopener">el-valle-panama.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta-franja">
+    <div class="cta-franja__media">
+      <div class="marcador marcador--lleno" data-etiqueta="cta-atardecer.jpg — jardines o montaña al atardecer"></div>
+    </div>
+    <div class="contenedor contenedor--estrecho">
+      <span class="antetitulo">Reservaciones</span>
+      <h2>Su escapada empieza con una llamada</h2>
+      <p>
+        Escríbanos o llámenos y le confirmamos disponibilidad para las fechas que tiene en
+        mente. Entrada desde las 3:00 p. m.
+      </p>
+      <div class="hero__acciones">
+        <a class="btn btn--primario" href="reservaciones.html">Solicitar reservación</a>
+        <a class="btn btn--fantasma" href="tel:+5079836080">(+507) 983-6080</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== Pie ===================== -->
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__rejilla">
+      <div>
+        <a class="marca" href="index.html">
+          <span class="marca__emblema" aria-hidden="true">VV</span>
+          <span class="marca__texto">
+            <span class="marca__nombre">Valle Verde</span>
+            <span class="marca__bajada">Hotel &amp; Restaurante</span>
+          </span>
+        </a>
+        <p style="font-size:var(--paso--1)">
+          Eco-resort en El Valle de Antón.<br>
+          Antiguo Hotel Los Capitanes.
+        </p>
+      </div>
+
+      <div>
+        <h3>Dirección</h3>
+        <address>
+          Calle El Ciclo, S/N<br>
+          El Valle de Antón, Coclé<br>
+          P.O. Box 87-4381, Panamá 7<br>
+          República de Panamá
+        </address>
+      </div>
+
+      <div>
+        <h3>Contáctenos</h3>
+        <ul>
+          <li>Tel.: <a href="tel:+5079836080">(+507) 983-6080</a></li>
+          <li>Cel.: <a href="tel:+50764718250">(+507) 6471-8250</a></li>
+          <li>Fax: (+507) 983-6505</li>
+          <li>Reservas: <a href="mailto:reservas@hotel-valleverde.com">reservas@hotel-valleverde.com</a></li>
+          <li>Información: <a href="mailto:info@hotel-valleverde.com">info@hotel-valleverde.com</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="habitaciones.html">Habitaciones y tarifas</a></li>
+          <li><a href="restaurante.html">Restaurante</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="reservaciones.html">Reservaciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie__base">
+      <p>&copy; <span data-anio>2026</span> Hotel Valle Verde. Todos los derechos reservados.</p>
+      <p>Entrada 3:00 p. m. · Salida 1:00 p. m.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Acción siempre a mano en móvil -->
+<div class="barra-movil">
+  <a class="btn btn--primario" href="reservaciones.html">Reservar</a>
+  <a class="btn btn--fantasma" href="tel:+5079836080">Llamar</a>
+</div>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel y Restaurante Valle Verde",
+  "alternateName": "Hotel Los Capitanes",
+  "description": "Eco-resort en El Valle de Antón, Coclé, Panamá. Jardines floridos rodeados por dos riachuelos, con vista a las montañas, suites y habitaciones familiares, y restaurante de cocina peruana, panameña e internacional.",
+  "url": "https://www.hotel-valleverde.com/",
+  "telephone": "+507-983-6080",
+  "faxNumber": "+507-983-6505",
+  "email": "reservas@hotel-valleverde.com",
+  "priceRange": "B/. 60 – B/. 180",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle El Ciclo, S/N",
+    "addressLocality": "El Valle de Antón",
+    "addressRegion": "Coclé",
+    "postalCode": "87-4381",
+    "addressCountry": "PA"
+  },
+  "checkinTime": "15:00",
+  "checkoutTime": "13:00",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Aire acondicionado", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "TV por cable", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Agua caliente", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Estacionamiento", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Restaurante", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Salón de eventos", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Habitaciones accesibles", "value": true }
+  ]
+}
+</script>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
