@@ -47,7 +47,12 @@ simplemente sustituir todo el bloque por `<img>` (el contenedor ya recorta con
 | `galeria-hero.jpg` | Hero de Galería |
 | `galeria/01-fachada.jpg` … `galeria/11-atardecer.jpg` | Galería |
 | `reservaciones-hero.jpg` | Hero de Reservaciones |
-| `og-valle-verde.jpg` | Vista previa al compartir (1200 × 630 px) |
+| `og-valle-verde.jpg` | Vista previa al compartir (1200 × 630 px) — **ya incluida** |
+
+`og-valle-verde.jpg` es una tarjeta tipográfica provisional con la marca, para
+que las vistas previas en WhatsApp, Facebook y X no salgan rotas. Conviene
+sustituirla por una fotografía real del hotel, respetando el tamaño de
+1200 × 630 px.
 
 ## Recomendaciones
 

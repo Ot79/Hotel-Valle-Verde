@@ -148,6 +148,12 @@
     formulario.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // Red de seguridad: el navegador ya valida al enviar, pero si el envío
+      // llega por otra vía no se debe abrir un correo con campos vacíos.
+      if (typeof formulario.reportValidity === "function" && !formulario.reportValidity()) {
+        return;
+      }
+
       var datos = new FormData(formulario);
       var valor = function (clave) { return (datos.get(clave) || "").toString().trim(); };
 
