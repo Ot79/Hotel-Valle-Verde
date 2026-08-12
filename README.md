@@ -49,7 +49,12 @@ ortografía y puntuación.
   confirmar precios y disponibilidad.
 - **Fotografías**: el sitio usa marcadores de posición. Ver
   [`assets/img/README.md`](assets/img/README.md).
-- **Versión en inglés**: el sitio original tenía traducción; aún no se replicó.
+- **Versión en inglés**: el sitio original es bilingüe y tiene un espejo completo
+  en inglés (`/thehotel/`, `/rooms/`, `/pricelist/`, `/restaurant/`, `/services/`,
+  `/massage/`, `/reservations/`). Aún no se replicó.
+- **Página de masaje**: el sitio original tiene una página propia
+  (`/masaje/` y `/massage/`). Aquí figura solo como servicio en la rejilla,
+  a la espera de su contenido: tipos de masaje, duración, precios y horarios.
 - **Reseñas de huéspedes**: la prueba social junto al botón de reservar es de
   lo que más ayuda a convertir, pero hacen falta reseñas reales de Google o
   TripAdvisor. No se inventan.
