@@ -139,12 +139,75 @@
   }
 
   /* ---------------------------------------------------------------------
+     Fechas: no permitir el pasado, y que la salida sea posterior a la llegada
+     --------------------------------------------------------------------- */
+  var hoy = new Date().toISOString().slice(0, 10);
+
+  var enlazarFechas = function (llegada, salida) {
+    if (!llegada || !salida) return;
+    llegada.min = hoy;
+    salida.min = hoy;
+
+    var sincronizar = function () {
+      if (!llegada.value) return;
+      var siguiente = new Date(llegada.value + "T00:00:00");
+      siguiente.setDate(siguiente.getDate() + 1);
+      salida.min = siguiente.toISOString().slice(0, 10);
+      if (salida.value && salida.value <= llegada.value) salida.value = salida.min;
+    };
+
+    llegada.addEventListener("change", sincronizar);
+    sincronizar();
+  };
+
+  /* ---------------------------------------------------------------------
+     Buscador de disponibilidad del hero
+     Lleva lo ya escrito a la página de reservación, para no pedirlo dos veces.
+     --------------------------------------------------------------------- */
+  var buscador = document.querySelector("[data-buscador]");
+
+  if (buscador) {
+    enlazarFechas(buscador.querySelector("[name=llegada]"), buscador.querySelector("[name=salida]"));
+
+    buscador.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var parametros = new URLSearchParams();
+      new FormData(buscador).forEach(function (valor, clave) {
+        if (String(valor).trim()) parametros.set(clave, valor);
+      });
+
+      window.location.href = "reservaciones.html?" + parametros.toString() + "#solicitud";
+    });
+  }
+
+  /* ---------------------------------------------------------------------
      Formulario de reservación → correo prellenado
      El sitio es estático; la solicitud se envía por e-mail al hotel.
      --------------------------------------------------------------------- */
   var formulario = document.querySelector("[data-formulario-reserva]");
 
   if (formulario) {
+    enlazarFechas(formulario.querySelector("#llegada"), formulario.querySelector("#salida"));
+
+    // Rellenar con lo que el visitante ya escribió en el buscador del hero.
+    var entrantes = new URLSearchParams(window.location.search);
+    ["llegada", "salida", "habitacion", "huespedes"].forEach(function (clave) {
+      var valor = entrantes.get(clave);
+      var campo = formulario.elements[clave];
+      if (!valor || !campo) return;
+
+      if (campo.tagName === "SELECT") {
+        // El buscador envía la categoría; buscamos la opción que empieza igual.
+        var opcion = [].find.call(campo.options, function (o) {
+          return o.value === valor || o.value.indexOf(valor) === 0;
+        });
+        if (opcion) campo.value = opcion.value;
+      } else {
+        campo.value = valor;
+      }
+    });
+
     formulario.addEventListener("submit", function (e) {
       e.preventDefault();
 

@@ -424,8 +424,17 @@ li { margin-bottom: 0.4em; }
 .hero__contenido {
   max-width: var(--ancho);
   margin-inline: auto;
-  padding: 0 var(--gutter) clamp(4rem, 9vw, 7rem);
+  /* El relleno superior deja libre la cabecera fija cuando el contenido crece */
+  padding: clamp(7rem, 16vh, 10rem) var(--gutter) clamp(3rem, 9vw, 7rem);
   width: 100%;
+}
+
+/* En pantallas pequeñas el hero se ajusta a su contenido, para que el
+   buscador de disponibilidad no quede fuera de pantalla. */
+@media (max-width: 720px) {
+  .hero { min-height: auto; }
+  .hero__texto { font-size: var(--paso-0); margin-bottom: 1.75rem; }
+  .buscador { margin-top: 1.75rem; }
 }
 
 .hero h1 { color: var(--blanco); max-width: 16ch; margin-bottom: 0.35em; }
@@ -438,6 +447,98 @@ li { margin-bottom: 0.4em; }
   margin-bottom: 2.25rem;
 }
 .hero__acciones { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* --------------------------------------------------------------------------
+   7b. Buscador de disponibilidad (en el hero de la portada)
+   -------------------------------------------------------------------------- */
+.buscador {
+  margin-top: 2.5rem;
+  padding: 1.35rem;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: end;
+  max-width: 960px;
+}
+
+.buscador__campo { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+
+.buscador__campo label {
+  font-family: var(--fuente-texto);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--verde-900);
+}
+
+.buscador__campo input,
+.buscador__campo select {
+  font-family: var(--fuente-texto);
+  font-size: max(16px, 0.95rem);
+  color: var(--texto);
+  /* 44px de alto mínimo: objetivo táctil cómodo en móvil */
+  min-height: 44px;
+  padding: 0.6em 0.75em;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  width: 100%;
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+.buscador__campo input:focus,
+.buscador__campo select:focus {
+  outline: none;
+  border-color: var(--verde-600);
+  box-shadow: 0 0 0 3px rgba(49, 106, 76, 0.16);
+}
+
+.buscador .btn {
+  min-height: 44px;
+  justify-content: center;
+  width: 100%;
+  padding-inline: 1.25em;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .buscador { grid-template-columns: 1fr 1fr; }
+  .buscador__campo--ancho, .buscador__accion { grid-column: 1 / -1; }
+}
+
+/* --------------------------------------------------------------------------
+   7c. Barra de acción fija en móvil
+   El CTA de reservar siempre accesible sin volver arriba.
+   -------------------------------------------------------------------------- */
+.barra-movil { display: none; }
+
+@media (max-width: 900px) {
+  .barra-movil {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 90;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    padding: 0.7rem 0.9rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(18, 39, 29, 0.97);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.22);
+  }
+  .barra-movil .btn {
+    min-height: 46px;
+    justify-content: center;
+    padding-inline: 0.75em;
+    font-size: 0.74rem;
+    width: 100%;
+  }
+  /* Espacio para que la barra no tape el final del pie */
+  body { padding-bottom: 4.6rem; }
+  body.nav-abierta .barra-movil { display: none; }
+}
 
 /* Hero compacto para páginas interiores */
 .hero--pagina {
@@ -899,8 +1000,10 @@ li { margin-bottom: 0.4em; }
 .campo select,
 .campo textarea {
   font-family: inherit;
-  font-size: var(--paso-0);
+  /* Nunca por debajo de 16px: iOS hace zoom automático y descoloca la página */
+  font-size: max(16px, var(--paso-0));
   color: var(--texto);
+  min-height: 46px;
   padding: 0.85em 1em;
   background: var(--blanco);
   border: 1px solid var(--borde);

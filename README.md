@@ -27,6 +27,9 @@ assets/img/           Imágenes (ver assets/img/README.md)
 - **Navegación plana** de seis páginas, sin submenús anidados.
 - La lista de precios pasó de una imagen/tabla rígida a una **tabla accesible**
   que se lee bien en teléfono.
+- **Buscador de disponibilidad** en la portada: fechas y huéspedes pasan ya
+  rellenados a la página de reservación, para no pedir lo mismo dos veces.
+- **Barra de acción fija en móvil** con «Reservar» y «Llamar», siempre visible.
 - **Formulario de reservación** que arma el correo con todos los datos.
 - **SEO y redes**: metadatos, Open Graph y datos estructurados `schema.org/Hotel`.
 - **Accesibilidad**: saltar al contenido, foco visible, `aria-current`, contraste
@@ -47,6 +50,20 @@ ortografía y puntuación.
 - **Fotografías**: el sitio usa marcadores de posición. Ver
   [`assets/img/README.md`](assets/img/README.md).
 - **Versión en inglés**: el sitio original tenía traducción; aún no se replicó.
+- **Reseñas de huéspedes**: la prueba social junto al botón de reservar es de
+  lo que más ayuda a convertir, pero hacen falta reseñas reales de Google o
+  TripAdvisor. No se inventan.
+- **WhatsApp**: en Panamá es el canal habitual de reserva. Falta confirmar si
+  el celular (+507) 6471-8250 tiene WhatsApp antes de enlazarlo.
+
+### Decisiones deliberadas
+
+No se implementaron los mensajes de urgencia y escasez del tipo «solo quedan
+2 habitaciones» o «5 personas reservaron hoy». El sitio no conoce el
+inventario real, así que esas cifras serían inventadas: es publicidad
+engañosa, daña la confianza y en varios países está sancionado. Cuando exista
+el sistema de reservas con base de datos podrán mostrarse, pero con datos
+verdaderos.
 
 ## Desarrollo local
 

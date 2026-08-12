@@ -18,7 +18,10 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;350;400;500;600&display=swap">
+<!-- Las tipografías no deben bloquear el primer pintado -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;350;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;350;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;350;400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="assets/css/style.css">
 <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -215,6 +218,13 @@
     </div>
   </div>
 </footer>
+
+<!-- Acción siempre a mano en móvil -->
+<div class="barra-movil">
+  <a class="btn btn--primario" href="reservaciones.html">Reservar</a>
+  <a class="btn btn--fantasma" href="tel:+5079836080">Llamar</a>
+</div>
+
 
 <script src="assets/js/main.js" defer></script>
 </body>
